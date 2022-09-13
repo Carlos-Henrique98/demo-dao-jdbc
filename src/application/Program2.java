@@ -31,5 +31,13 @@ public class Program2 {
 		Department newDepart = new Department(1, nome);
 		departmentDao.insert(newDepart);
 		System.out.println("Inserted! New Id = " + newDepart.getId());
+
+		System.out.println("\n===== TEST 5: seller delete ====");
+		System.out.println("Enter id for delete test: ");
+		int id = sc.nextInt();
+		departmentDao.deleteById(id);
+		System.out.println("Deleted completed");
+
+		sc.close();
 	}
 }
